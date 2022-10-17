@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="http://localhost:3000/images/logo.png" type="image/x-icon" />
+      
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="/profile.css" />
+      <title>Adobook</title>
+   </head>
+   <body>
+      <div id="myModal" class="modal">
+         <!-- Modal content -->
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalP" style="color:blue;"></p>
+            <br>
+            <div id="info">
+               <div id ="searchDiv">
+
+               </div>
+               <div id="left">
+                  <div class ="moveDown">
+                     <p>No likes</p>
+                  </div>
+               </div>
+               <div id="right">
+                  <div id="clr" class="likes1">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <nav>
+         <div class="nav-left">
+            <a id="host">
+            <img src="http://localhost:3000/images/logo.png" alt="Logo" style=" width: 40px;" /></a>
+            <button class="button button4" onclick="proba()">Search...</button>
+
+            <!-- <input id="searchInput" type="text" placeholder="Search Adobook.." /> -->
+         </div>
+         <!-- <a href="http://localhost:3000/">
+            <div class="nav-left">
+               <img src="/images/logo.png" alt="Logo" />
+               <input type="text" placeholder="Search Adobook.." />
+            </div>
+         </a> -->
+         
+        
+         <div class="nav-right">
+            <img id="pic" class="profile" />
+            <a href="#">
+            <i class="fa fa-bell"></i>
+            </a>
+            <a href="#">
+            <i class="fas fa-ellipsis-h"></i>
+            </a>
+         </div>
+      </nav>
+      <div class="container">
+      <div class="middle-panel">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-10">
+                  <div class="fb-profile-block">
+                     <div class="fb-profile-block-thumb cover-container"></div>
+                     <div class="profile-img">
+                        <a href="#">
+                        <img
+                           id="profilePicture" src=""
+                           alt=""
+                           title=""
+                           />
+                        </a>
+                     </div>
+                     <div class="profile-name d-flex justify-content-end">
+                        <h2 id="profileName">
+                        <h2>
+                        <!-- <button
+                           style="
+                             width: 130px;
+                             height: 35px;
+                             border: 1px solid #ccd0d5;
+                             border-radius: 2px;
+                             color: #4b4f56;
+                             background-color: #f5f6f7;
+                             font-weight: bold;
+                             text-align: center;
+                             margin-left: 160px;
+                           "
+                           >
+                           <i class="fa fa-pencil" aria-hidden="true"></i>
+                           Edit profile
+                           </button>
+                           <button
+                           style="
+                             height: 35px;
+                             border: 1px solid #ccd0d5;
+                             border-radius: 2px;
+                             color: #4b4f56;
+                             background-color: #f5f6f7;
+                             font-weight: bold;
+                             text-align: center;
+                             margin-left: 10px;
+                           "
+                           >
+                           
+                           
+                           Activity Log
+                           </button>
+                           <button
+                           style="
+                             height: 35px;
+                             border: 1px solid #ccd0d5;
+                             border-radius: 2px;
+                             color: #4b4f56;
+                             background-color: #f5f6f7;
+                             font-weight: bold;
+                             text-align: center;
+                           "
+                           >
+                           <i class="fa fa-pencil" aria-hidden="true"></i>
+                           </button> -->
+                     </div>
+                     <div class="fb-profile-block-menu">
+                        <div class="block-menu" style="width: 600px;">
+                           <div id="infoDiv1" class="block-menu2">
+                              <p id="infoP1"></p>
+                           </div>
+                           <div id="infoDiv2" class="block-menu2">
+                              <p id="infoP2"></p>
+                           </div>
+                           <!-- <ul>
+                              <li><a href="#"></a></li>
+                              <li><a href="#">about</a></li>
+                              <li><a href="#">Friends</a></li>
+                              <li><a href="#">Photos</a></li> -->
+                           </ul>  
+                        </div>
+                        <!-- <div class="block-menu">
+                           <ul>
+                             <li><a href="#">Timeline</a></li>
+                             <li><a href="#">about</a></li>
+                             <li><a href="#">Friends</a></li>
+                             <li><a href="#">Photos</a></li>
+                             <li><a href="#">More...</a></li>
+                           </ul>
+                           </div> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- <div class="post create">
+            <div class="post-top">
+                <div class="dp">
+                    <img id="postPic" src="/images/girl.jpg" alt="">
+                </div>
+                <input id="namePa" type="text" placeholder="A" value="" />
+            </div>
+            
+            <div class="post-bottom">
+                <div class="action">
+                    <i class="fa fa-video"></i>
+                    <span>Live video</span>
+                </div>
+                <div class="action" >
+                    <i class="fa fa-image"></i>
+                    <span>Photo/Video</span>
+                </div>
+                <div class="action" onclick="post()">
+                  <i class="fa fa-paper-plane"></i>
+                    <span>Post</span>
+                </div>
+            </div>
+            </div> -->
+         <div id="my-post"></div>
+         <div id="posts"></div>
+      </div>
+   </body>
+   <script>
+      document.addEventListener('keydown', function(event){
+      	if(event.key === "Escape"){
+            modal.style.display = "none";
+            document.body.classList.remove("stop-scrolling");
+      	}
+      });   
+      // Get the modal
+      var modal = document.getElementById("myModal");
+      
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+      
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+      
+      // When the user clicks the button, open the modal 
+
+      
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+        document.body.classList.remove("stop-scrolling");
+      
+      }
+      
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          document.body.classList.remove("stop-scrolling");
+      
+        }
+      }
+   </script>
+   <script  type="text/javascript" src="/moment.js"></script>
+   <script src="/profile.js"></script>
+   <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+      ></script>
+   <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+      ></script>
+   <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+      ></script>
+</html>

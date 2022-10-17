@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="http://localhost:3000/images/logo.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styles.min.css" />
+    <link rel="stylesheet" href="chat.css" />
+    <title>Adobook</title>
+  </head>
+  <body>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalP" style="color: blue"></p>
+        <br />
+        <div id="info">
+          <div id="searchDiv"></div>
+          <div id="left">
+            <div class="moveDown">
+              <p>No likes</p>
+            </div>
+          </div>
+          <div id="right">
+            <div id="clr" class="likes1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="nav-left">
+        <a id="host"> <img src="./images/logo.png" alt="Logo" /></a>
+        <button class="button button4" onclick="proba()">Search...</button>
+
+        <!-- <input id="searchInput" type="text" placeholder="Search Adobook.." /> -->
+      </div>
+      <div class="nav-middle">
+        <a href="#" class="active">
+          <i class="fa fa-home"></i>
+        </a>
+        <a href="#">
+          <i class="fa fa-users"></i>
+        </a>
+      </div>
+      <div class="nav-right">
+        <img id="pic" class="profile" />
+        <a href="#">
+          <i class="fa fa-bell"></i>
+        </a>
+        <a href="#">
+          <i class="fas fa-ellipsis-h"></i>
+        </a>
+      </div>
+    </nav>
+    <!-- chat template -->
+    <div class="chat">
+      <div class="chat__sidebar">
+        <div class="searchInput" style="width: 100%; padding-top: 20px">
+          <input
+            id="searchInput"
+            style="width: 90%"
+            class="comments"
+            type="text"
+            onkeyup="getSearchResult()"
+            placeholder="Search friends..."
+          />
+        </div>
+        <div id="insertFriends"></div>
+      </div>
+      <div id="columnd">
+        <div id="insertMessages" class="chat__main">
+          <div id="messages" class="chat__messages"></div>
+        </div>
+        <div class="compose">
+          <div id="message-form">
+            <!-- <input name="message" placeholder="Message" />
+            <button>Send</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script id="message-template" type="text/html">
+      < div class="message">
+         <p>
+           <span class="message__name">Some User Name</span>
+           <span class="message__meta">{{createdAt}}</span>
+         </p>
+         <p>{{message}}</p>
+       </div>
+    </script>
+
+    <script id="location-message-template" type="text/html">
+      <div class="message">
+        <p>
+          <span class="message__name">Some User Name</span>
+          <span class="message__meta">{{createdAt}}</span>
+        </p>
+        <p><a href="{{url}}" target="_blank">My current location</a></p>
+      </div>
+    </script>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script>
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        modal.style.display = "none";
+        document.body.classList.remove("stop-scrolling");
+      }
+    });
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+      document.body.classList.remove("stop-scrolling");
+    };
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+        document.body.classList.remove("stop-scrolling");
+      }
+    };
+  </script>
+
+  <script type="text/javascript" src="moment.js"></script>
+  <script src="chat.js"></script>
+</html>

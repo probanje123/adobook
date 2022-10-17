@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Adobook</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <h2>Welcome to Adobook</h2>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <div class="form">
+          <h1>Create Account</h1>
+          <input
+            id="firstName"
+            type="text"
+            placeholder="First Name"
+            required=""
+          />
+          <input
+            id="lastName"
+            type="text"
+            placeholder="Last name"
+            required=""
+          />
+          <input type="text" id="username" placeholder="Username" required="" />
+          <input type="email" id="email" placeholder="Email" required="" />
+
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required=""
+          />
+          <button onclick="register()">Sign up</button>
+        </div>
+      </div>
+      <div class="form-container sign-in-container">
+        <div class="form">
+          <h1>Sign in</h1>
+
+          <input type="email" id="emailLogin" placeholder="Email" required="" />
+          <input
+            type="password"
+            id="passwordLogin"
+            placeholder="Password"
+            required=""
+          />
+          <button onclick="login()">Sign In</button>
+        </div>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./login.js"></script>
+    <script></script>
+  </body>
+</html>
